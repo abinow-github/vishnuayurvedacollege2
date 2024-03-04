@@ -1416,7 +1416,6 @@ header{
     float: left;
     height: 100%;
     min-height: 1px;
-    background: #4b99613d;
     padding: 10px;
 }
 [dir='rtl'].slick-slide
@@ -1457,9 +1456,9 @@ a{
   text-align: center;
 }
 .news-img-div{/* image div */
-  width: 150px;
+  width: 300px;
   margin: auto;
-  height: 150px;
+  height: 300px;
   overflow: hidden;
 
 }

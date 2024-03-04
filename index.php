@@ -246,7 +246,7 @@ include("dashboard/root/db.php");
                 $firstImage = trim($imageFilenames[0]);
                 $imagePath = "dashboard/news-images/" . $firstImage;
               ?>
-                <div class="slide"><a href="News/details?msg=<?php echo $row['id']; ?>"><div class="news-img-div"><img src="<?php echo $imagePath; ?>" style="width:100%;"  alt="" srcset=""></div><p class="title"><?php echo $row['title']; ?></p><p class="text p"><?php echo strip_tags(limitWords($row['text'], 50)); ?>...</p></a></div>
+                <div class="slide"><a href="News/details?msg=<?php echo $row['id']; ?>"><div class="news-img-div"><img src="<?php echo $imagePath; ?>" style="width:100%;"  alt="" srcset=""></div><p class="title"><?php echo $row['title']; ?></p></a></div>
                 <?php
               }
               if ($result->num_rows > 0){
@@ -255,7 +255,7 @@ include("dashboard/root/db.php");
                 $firstImage = trim($imageFilenames[0]);
                 $imagePath = "dashboard/news-images/" . $firstImage;
                 ?>
-                <div class="slide"><a href="News/details?msg=<?php echo $row['id']; ?>"><div class="news-img-div"><img src="<?php echo $imagePath; ?>" style="width:100%;" alt="" srcset=""></div><p class="title"><?php echo $row['title']; ?></p><p class="text p"><?php echo strip_tags(limitWords($row['text'], 50)); ?>....</p></a></div>
+                <div class="slide"><a href="News/details?msg=<?php echo $row['id']; ?>"><div class="news-img-div"><img src="<?php echo $imagePath; ?>" style="width:100%;" alt="" srcset=""></div><p class="title"><?php echo $row['title']; ?></p></a></div>
                 <?php
               }
               if ($result->num_rows > 0){
@@ -264,7 +264,7 @@ include("dashboard/root/db.php");
                 $firstImage = trim($imageFilenames[0]);
                 $imagePath = "dashboard/news-images/" . $firstImage;
                 ?>
-                <div class="slide"><a href="News/details?msg=<?php echo $row['id']; ?>"><div class="news-img-div"><img src="<?php echo $imagePath; ?>" style="width:100%;" alt="" srcset=""></div><p class="title"><?php echo $row['title']; ?></p><p class="text p"><?php echo strip_tags(limitWords($row['text'], 50)); ?>...</p></a></div>
+                <div class="slide"><a href="News/details?msg=<?php echo $row['id']; ?>"><div class="news-img-div"><img src="<?php echo $imagePath; ?>" style="width:100%;" alt="" srcset=""></div><p class="title"><?php echo $row['title']; ?></p></a></div>
                 <?php
               }
               function limitWords($string, $word_limit) {
