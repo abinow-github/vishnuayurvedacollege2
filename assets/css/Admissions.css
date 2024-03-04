@@ -1,0 +1,55 @@
+
+
+/* ............................... common styles ...................................... */
+.addmission-notification{
+    padding: 80px 0;
+    z-index: 1;
+    position: relative;
+  }
+
+
+
+
+  /* ..................... Admission-Notification-2023-2024.html ............................. */
+  @media screen and (min-width:992px) {
+    .addmission-notification .row{
+        width: 80%;
+        margin: auto;
+    }
+  }
+  /* ............................... Admission-Notification-2023-2024.html END ...................................... */
+
+
+  /* ..................... Course-Details.html ............................. */
+  .Course-Details{
+      width: 100%;
+      padding: 80px 0;
+      position: relative;
+      z-index: 1;
+      table{
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 1px;
+          text-align: center;
+          td,th{
+              padding: 10px 5px;
+          }
+          
+          th{
+              background-color: brown;
+              color: white;
+              margin-bottom: 5px;
+          }
+          td{
+              
+              background: #95c3a2;
+              color: white;
+              hr{
+                  height: 2px;
+                  margin: 5px 0;
+              }
+          }
+      }
+  }
+  
+  /* ............................... Course-Details.html END ...................................... */

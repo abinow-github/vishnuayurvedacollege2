@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Simple Lightbox - Responsive touch friendly Image lightbox</title>
+
+    <link rel="stylesheet" href="../dist/simple-lightbox.css?v2.14.0" />
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            line-height: 34px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container .gallery a img {
+            float: left;
+            width: 25%;
+            height: auto;
+            border: 2px solid #fff;
+            -webkit-transition: -webkit-transform .15s ease;
+            -moz-transition: -moz-transform .15s ease;
+            -o-transition: -o-transform .15s ease;
+            -ms-transition: -ms-transform .15s ease;
+            transition: transform .15s ease;
+            position: relative;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        a {
+            color: #009688;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #01695f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gallery">
+            <a href="../assets/img/gallery/Agadatantra.jpg" class="big"><img src="../assets/img/gallery/Agadatantra.jpg" alt="" title="Beautiful Image" /></a>
+            <a href="img/full/02.jpg"><img src="img/thumb/02.jpg" alt="" /></a>
+            <a href="img/full/03.jpg"><img src="img/thumb/03.jpg" alt="" title="Beautiful Image"/></a>
+            <a href="img/full/04.jpg"><img src="img/thumb/04.jpg" alt="" /></a>
+            <a href="img/full/05.jpg"><img src="img/thumb/05.jpg" alt="" /></a>
+            <a href="img/full/06.jpg"><img src="img/thumb/06.jpg" alt="" /></a>
+            <div class="clear"></div>
+        </div>
+        <br>
+
+    </div>
+    <script src="../dist/simple-lightbox.js?v2.14.0"></script>
+    <script>
+        (function() {
+            var $gallery = new SimpleLightbox('.gallery a', {});
+        })();
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function() {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function(msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+
+</html>

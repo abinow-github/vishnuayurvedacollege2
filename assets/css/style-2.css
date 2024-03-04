@@ -1,0 +1,916 @@
+:root{
+    --primary_clr:#026f20;
+    --heading-clr:#026f20b5;
+    --secondary-clr:#b64646d4;
+}
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap');
+
+
+/*............... commmon styles ..........................*/
+::-webkit-scrollbar { /* right side scroll bar */
+  border: 1px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+border-radius: 0;
+background: #4b996159;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: #4b9961;
+}
+.section-1,.section-2,.section-3,.section-4,.section-5,.section-6,.section-7,.faculity-section-1,.news-section-1.gallery-section,.Activities-section-1{
+  padding: 80px 0;
+  z-index: 1;
+  position: relative;
+}
+footer{
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+p.p{
+  color: #567960d1;
+}
+h2.h2{    
+  color: var(--heading-clr);
+  font-weight: 900;
+  font-family: 'Exo 2', sans-serif;
+  text-transform: capitalize;
+}
+.h-clr{
+  color: var(--heading-clr);
+}
+@media screen and (max-width:765px) {
+  .hide_on_mobile{
+    display: none;
+  }
+}
+@media screen and (min-width:992) {
+  .hide_on_lap{
+    display: none;
+  }
+}
+@media screen and (max-width:992) and (min-width:765px) {
+  .hide_on_tab{
+    display: none;
+  }
+}
+body{
+  scroll-behavior: smooth;
+}
+/*............................... animations ..........................*/
+
+/*
+ ----------------------------------------
+  animation scale-up-center
+  ----------------------------------------
+ */
+@keyframes scale-up-center {
+  0% {
+            transform: scale(0.9);
+  }
+  100% {
+            transform: scale(1);
+  }
+}
+
+
+
+/*............... header ..........................*/
+header{
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+  width: 100%;
+}
+.navbar{
+    background: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  top: 0;
+}
+.navbar.sticky{
+  background: white;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+  top: 0;
+}
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .logo img{
+    width: 100px;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: var(--heading-clr);
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.navbar.sticky .menu-list li a{
+    color: var(--heading-clr);
+}
+.navbar .menu-list li a.active{
+    color: var(--secondary-clr);
+}
+.menu-list li a:hover{
+  color: var(--secondary-clr);
+}
+.banner{
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #026f20;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  .navbar .content{
+    width: 100%;
+    margin: 0 10px;
+  }
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: white;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+  }
+  .navbar .menu-list::-webkit-scrollbar {
+    display: none;
+   }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 40px;
+  }
+  .navbar .menu-list li a{
+    color: var(--heading-clr);
+    font-size: 15px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
+/* dropdown*/
+.navbar .menu-list .dropdown {
+    position: relative;
+}
+
+.navbar .menu-list .dropdown .dropdown-menu {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2ea64f;
+    width: max-content;
+    padding: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ;
+}
+
+.navbar .menu-list .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    max-height: 400px;
+    border: 0;
+    transition: max-height 1s ;
+   
+}
+
+.navbar .menu-list .dropdown-menu li {
+    margin-top: 0;
+}
+
+.navbar .menu-list .dropdown-menu li a {
+    font-size: 13px;
+    color: white;
+    margin-left: 0;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    padding: 5px;
+    border-radius: 2px;
+}
+.navbar .menu-list .dropdown-menu li a:hover{
+  background: white;
+  color: #2ea64f;
+}
+@media screen and (max-width:864px) {
+  .navbar .menu-list .dropdown .dropdown-menu{
+    margin: auto;
+    position: relative;
+  }
+}
+}
+.banner{
+    margin-top: 130px;
+    width: 100%;
+    height: 45vh;
+    background: url(../img/banner/banner2_img-2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    .title-div{
+        z-index: 1;
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 50px;
+        flex-direction: column;
+    }
+    .title{
+        color: white;
+        font-weight: bold;
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        position: fixed;
+        z-index: 0;
+    }
+    p{
+        color: white;
+        font-size: 1.4rem;
+        position: fixed;
+        z-index: 0;
+        margin-top: 115px;
+        padding-left: 10px;
+    }
+    @media screen and (max-width:765px) {
+      .title-div{
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+      }
+      p{
+        display: none;
+      }
+    }
+    p a{
+        text-decoration: none;
+        color: white;
+    }
+    .pos-abs-bg{
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.59);
+    }
+}
+
+/*........................................................ header END ................................................................*/
+
+/*............... section-1 ..........................*/
+.section-1{
+    .row:nth-child(1) .col-md-6{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 80%;
+    }
+    @media screen and (max-width:760px) {
+        .row:nth-child(1){
+            flex-direction: column-reverse;
+            gap: 10px;
+        }
+    }
+
+    .row:nth-child(2){
+        .cnt-div{
+            background: #a9e0b973;
+            padding: 15px;
+            border-radius: 10px;
+            width: 90%;
+            margin: auto;
+            padding-top: 20px;
+        }
+        .h2{
+            text-align: center;
+        }
+        h5{
+            color: #a52a2abf;
+            text-align: center;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+    }
+}
+/*........................................................ section-1 END ................................................................*/
+
+
+
+
+/*............... footer ..........................*/
+footer{
+    background-color: #d38080;
+    .img-part{
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  
+    .img-div{
+      width: 50%;
+      border-radius: 50%;
+      background: white;
+      margin: auto;
+    }
+    hr{
+        opacity: 50%;
+    }
+    a{
+      text-decoration: none;
+      transition: 0.4s;
+    }
+    a:hover{
+      margin-left: 10px;
+      color: brown !important;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*........................................................ faculty.html ................................................................*/
+
+@-webkit-keyframes swing-in-top-fwd { /* card animation */
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+  .faculity-section-1{
+    .cards-div{
+       display: flex;
+       justify-content: space-evenly;
+       flex-wrap: wrap;
+    }
+    @media screen and (max-width:760px) {
+      .cards-div{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    .card{
+      width: 300px;
+      border: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #c867674d;
+      cursor: pointer;
+      opacity: 0;
+      margin-bottom: 10px;
+    }
+    .card.anime.animated{
+	        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    }
+    .card .img-part{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 230px;
+      background: #b64646;
+      .img-div{
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid white;
+      }
+      .pos-abs-img{
+        position: absolute;
+        width: 100%;
+        bottom: -1px;
+      }
+    }
+    .card .card-body{
+      .card-title *{
+        font-weight: bold;
+      }
+
+      .other-details .p{
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .facility-hr{
+    width: 0%;
+    margin: auto;
+    color: var(--primary_clr);
+    height: 5px;
+    opacity: 70%;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+  }
+  .facility-hr.animated{
+    width: 90%;
+  }
+  /*........................................................ faculty.html END ................................................................*/
+
+
+
+
+
+
+
+
+
+/*........................................................ announcements.html ................................................................*/
+.news-section-1{
+  padding: 50px 0;  
+  position: relative;
+  z-index: 1;
+  .h2{
+    font-size: 2.5rem;
+  }
+  .l-news-card-1{ /* large image part */
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    .card-body{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0;
+      .news{
+        width: 90%;
+        background-color: #4b9961f5;
+        position: relative;
+        z-index: 100;
+        padding: 10px;
+        color: white;
+      }
+      .news .news-title{
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .news .news-cnt p{
+        font-size: 0.7rem;
+      }
+    }
+    .pos-abs-img{
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+    }
+    .pos-abs-bg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #4b99616e;
+      top: 0;
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+  .l-news-card-1:hover{
+    .pos-abs-img{
+      transform: scale(1.1);
+    }
+    .pos-abs-bg{
+      opacity: 1;
+    }
+  }/* large image part END */
+
+
+  .col-md-4{ /* small image part */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .l-news-card-2,.l-news-card-3{
+    cursor: pointer;
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    .card-body{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0;
+      .news{
+        width: 100%;
+        background-color: #4b9961f5;
+        position: relative;
+        z-index: 100;
+        padding: 6px;
+        color: white;
+      }
+      .news .news-title{
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .news .news-cnt p{
+        font-size: 0.6rem;
+      }
+    }
+    .pos-abs-img{
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+    }
+    .pos-abs-bg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #4b99616e;
+      top: 0;
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+  .l-news-card-2:hover{
+    .pos-abs-img{
+      transform: scale(1.1);
+    }
+    .pos-abs-bg{
+      opacity: 1;
+    }
+}
+}
+/*........................................................ announcements.html END ................................................................*/
+
+
+
+/*........................................................ Activities.html ................................................................*/
+.Activities-section-1{
+  .col-md-4{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    .inner-book {
+      width: 300px;
+    }
+    
+    .book {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateZ(0);
+    }
+    
+    .inner-book {
+      display: flex;
+      align-items: center;
+      transform-style: preserve-3d;
+      perspective: 2000px;
+    }
+    
+    .inner-book {
+      display: flex;
+      align-items: center;
+      transform-style: preserve-3d;
+      perspective: 2000px;
+    }
+    
+    .inner-book:before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 0;
+      bottom: 14px;
+      transform: rotateY(-20deg) translateZ(-20px);
+      z-index: 0;
+      box-shadow: 10px 12px 20px 13px rgba(0, 0, 0, 0.3);
+    }
+    
+    .inner-book .img {
+      transform: rotateY(-20deg);
+      width: 100%;
+      z-index: 5;
+      clear: both;
+      height: 100%;
+      background: #ddd;
+    }
+    
+    .inner-book img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+    }
+    
+    .inner-book .img:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      z-index: 2;
+    }
+    
+    .page {
+      width: calc(100% - 20px);
+      height: calc(100% - 2px);
+      position: absolute;
+      box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.2),
+        inset -1px 0px 1px rgba(150, 150, 150, 0.1);
+      border-radius: 0px 3px 3px 0px;
+      transform: rotateY(-20deg) translateZ(-5px);
+      right: -3px;
+      z-index: 4;
+      background: white;
+    }
+    
+    .page-2 {
+      height: calc(100% - 4px);
+      right: -6px;
+      z-index: 3;
+    }
+    
+    .page-3 {
+      height: calc(100% - 6px);
+      right: -9px;
+      z-index: 2;
+    }
+    
+    .page-4 {
+      height: calc(100% - 8px);
+      right: -12px;
+      z-index: 1;
+    }
+    
+    .page-5 {
+      height: calc(100% - 10px);
+      right: -15px;
+      z-index: 0;
+    }
+    
+    .img.final-page {
+      position: absolute;
+      z-index: -1;
+      right: -17px;
+      transform: rotateY(-19deg) translateZ(-10px) scale(0.984);
+    }
+  }
+  .card button{
+    border: 0;
+    
+    background-color: #026f20d4;
+    color: white;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 5px;
+  }
+  .card button:hover{
+    background-color: var(--primary_clr);
+  }
+  
+  
+}
+.Activities-section-2{
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+
+  a{
+      text-decoration: none;
+      color: black;
+  }
+  .card{
+      position: relative;
+      font-family: 'Exo 2', sans-serif;
+      overflow: hidden;
+      height: 150px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 2px solid rgb(162 214 181);
+      .card-body{
+          display: flex;
+          align-items: center;
+      }
+      .card-title{
+          transition: 0.5s;
+      }
+      h2{
+          text-transform: uppercase;
+      }
+      .year{
+          color: #85e79e;
+      }
+
+      .pos-abs-img{/* card calender image */
+          position: absolute;
+          bottom: -20%;
+          right: -20%;
+          width: 100px;
+          transition: 0.5s;
+      }
+
+  }
+  .card:hover{
+      background: linear-gradient(125deg, #e03737, #dab6b6);
+      border: 0;
+      .card-title{
+          padding-left: 10px;
+      }
+      h2{
+          color: white;
+      }
+      .year{
+          color: #bbe6c6;
+      }
+      .pos-abs-img{
+          transform: translate(-15px, -15px);
+      }
+  }
+}
+/*........................................................ Activities.html END ................................................................*/
+
+
+
+
+
+/*........................................................ contact.html  ................................................................*/
+.ftco-section{
+  position: relative;
+  z-index: 1;
+}
+/*........................................................ contact.html END ................................................................*/
+
+
+
+
+/*........................................................ awards&achievments.html /gallery ................................................................*/
+.gallery-section{
+  img{
+    height: 100%;
+    object-fit: cover;
+  }
+}
+/*........................................................ awards&achievments.html /ghallery END ................................................................*/
+
+
+
+
+

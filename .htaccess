@@ -1,0 +1,76 @@
+<FilesMatch "\.(html|htm|js|css)$">
+    Header set Cache-Control "max-age=0, no-store"
+</FilesMatch>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^home$ index.php [L]
+RewriteRule ^about$ about.html [L]
+RewriteRule ^faculty$ faculty.html [L]
+
+
+
+
+RewriteRule ^academics/director$ academics/director.html [L]
+RewriteRule ^academics/Principal$ academics/principal.html [L]
+RewriteRule ^academics/deputy-superintendent$ academics/deputy-superintendent.html [L]
+RewriteRule ^academics/non-teaching-staff$ academics/non-teaching-staff.html [L]
+RewriteRule ^academics/recognition$ academics/recognition.html [L]
+RewriteRule ^academics/academics-result$ academics/academics-result.html [L]
+RewriteRule ^academics/Student-List$ academics/Student-List.pdf [L]
+
+
+
+RewriteRule ^hospital/faculty$ hospital/faculty.html [L]
+RewriteRule ^hospital/departments$ hospital/departments.html [L]
+RewriteRule ^hospital/hospital-staff$ hospital/hospital-staff.html [L]
+RewriteRule ^hospital/clinical-materials$ hospital/clinical-materials.html [L]
+RewriteRule ^hospital/ipd-attendance$ hospital/ipd-attandance.html [L]
+RewriteRule ^hospital/opd-attendance$ hospital/opd-attandance.html [L]
+RewriteRule ^hospital/hospital-staff-Attendance$ hospital/hospital-staff-Attandance.html [L]
+
+
+
+
+
+RewriteRule ^Admissions/Admission-Notification-2023-2024$ Admissions/Admission-Notification-2023-2024.html [L]
+RewriteRule ^Admissions/Provisional-List-of-BAMS-MANAGEMENT-2023-2024$ Admissions/Provisional-List-of-BAMS-MANAGEMENT-2023-2024.html [L]
+RewriteRule ^Admissions/BAMS-Management-Application-2023-24$ Admissions/apply-online.php [L]
+RewriteRule ^Admissions/Prospectus-2023-2024$ Admissions/1Prospectus-2023-2024.pdf [L]
+RewriteRule ^Admissions/Rank-List$ Admissions/Rank-List.html [L]
+RewriteRule ^Admissions/Accepted-Rejected-List$ Admissions/Accepted-Rejected-List.html [L]
+RewriteRule ^Admissions/Joining-Non-Joining-Report-Management-2023-2024$ Admissions/Joining-Non-Joining-Report-Management-2023-2024.html [L]
+RewriteRule ^Admissions/Affiliated-University$ Admissions/Affiliated-University.html [L]
+RewriteRule ^Admissions/Course-Details$ Admissions/Course-Details.html [L]
+
+
+
+
+
+RewriteRule ^College/Faculty$ College/Faculty.html [L]
+RewriteRule ^College/Campus$ College/Campus.html [L]
+RewriteRule ^College/Students-union$ College/The-Agartha-Students-Union.pdf [L]
+RewriteRule ^College/Teaching-Staff-Attendance$ College/Teaching-Staff-Attandance.html [L]
+RewriteRule ^College/Non-Teaching-Staff-Attendance$ College/Non-Teaching-Staff-Attandance.html [L]
+RewriteRule ^College/Awards-and-Achievements$ College/Awards-and-Achievements.html [L]
+RewriteRule ^College/Students-Attendance$ College/Students-Attendance.html [L]
+RewriteRule ^College/Seminar-Attended$ College/Seminar-Attended.html [L]
+RewriteRule ^College/Seminar-Conducted$ College/Seminar-Conducted.html [L]
+RewriteRule ^College/College-Council$ College/College-Council.pdf [L]
+
+
+
+
+RewriteRule ^News/announcement$ News/announcement.php [L]
+RewriteRule ^News/Awards_&_Achievements$ News/Awards_&_Achievements.php [L]
+RewriteRule ^News/details$ News/news.php [L]
+RewriteRule ^News/Activities$ News/Activities.html [L]
+
+RewriteRule ^Contact$ contact.html [L]
+
+
+RewriteRule ^academics/error$ 404.html [L]
+RewriteRule ^College/error$ 404.html [L]
+
+
+
